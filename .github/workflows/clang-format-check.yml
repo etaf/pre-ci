@@ -10,7 +10,5 @@ jobs:
         with:
           fetch-depth: 0
       - name: Check Clang Format
-        uses: ./ci_docker
-        with:
-          args: 
-            /bin/bash ./ci_docker/clang_format_check.sh
+        run: |
+          /bin/bash ./ci_docker/clang_format_check.sh
