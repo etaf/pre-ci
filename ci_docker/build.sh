@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/xinanlin/test-preci
 rm -rf build && mkdir build
 cd build
 cmake .. -DIGC_PATH=/home/xinanlin/cm_sdk -DCMAKE_BUILD_TYPE=Debug  && make -j$(nproc)
