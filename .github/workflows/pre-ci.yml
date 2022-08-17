@@ -1,0 +1,15 @@
+name: Run test case
+on: [pull_request]
+
+jobs:
+  build-and-test:
+    runs-on: [self-hosted, linux]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: unit test
+      - run: /bin/bash ./ci_docker/build.sh
+      - run: /bin/bash ./ci_docker/run_test.sh
+
